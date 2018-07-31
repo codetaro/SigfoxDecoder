@@ -5,7 +5,7 @@ function parseSigFox(data) {
         return null;
     }
 
-    var recordType = buffer[0] & 0x0f;
+    var recordType = buffer[0] & 0x0f; //ignore the left 4 bits of buffer[0]
 
     switch (recordType) {
         case 0:
